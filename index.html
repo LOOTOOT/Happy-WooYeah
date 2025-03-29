@@ -4,16 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HappyWooYeah</title>
-    
+
     <!-- 引入字体 -->
     <link href="https://fonts.loli.net/css2?family=Inter:wght@300;400;500;600;700&family=Merriweather:wght@300;400;700&family=Fira+Code&family=Montserrat:wght@400;500;600;700&family=Caveat&display=swap" rel="stylesheet">
-    
+
     <!-- 引入TailwindCSS -->
     <link href="https://cdn.bootcdn.net/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
-    
+
     <!-- 引入Preline UI -->
     <link rel="stylesheet" href="https://cdn.bootcdn.net/ajax/libs/preline/1.0.0/preline.min.css" />
-    
+
     <!-- 引入图标库 -->
     <link rel="stylesheet" href="https://cdn.bootcdn.net/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
 
@@ -30,7 +30,7 @@
             --color-primary-700: #76233c;
             --color-primary-800: #5d182d;
             --color-primary-900: #3c101d;
-            
+
             --color-secondary-50: #eed2ca;
             --color-secondary-100: #e4c0b6;
             --color-secondary-200: #d7ac9f;
@@ -41,7 +41,7 @@
             --color-secondary-700: #5f2817;
             --color-secondary-800: #451b0e;
             --color-secondary-900: #230e07;
-            
+
             --color-neutral-50: #ffffff;
             --color-neutral-100: #ffffff;
             --color-neutral-200: #ffffff;
@@ -52,7 +52,7 @@
             --color-neutral-700: #c2a3a3;
             --color-neutral-800: #b98989;
             --color-neutral-900: #aa6f6f;
-            
+
             /* Typography */
             --font-family-heading: Merriweather, Georgia, serif;
             --font-family-body: Merriweather, Georgia, serif;
@@ -60,7 +60,7 @@
             --line-height: 1.8;
             --heading-scale: 1.35;
             --heading-weight: 700;
-            
+
             /* UI Style */
             --border-radius: 2px;
             --shadow-level: 0;
@@ -85,7 +85,7 @@
         .font-handwriting {
             font-family: 'Caveat', cursive;
         }
-        
+
         .text-primary {
             color: var(--color-primary-500);
         }
@@ -98,7 +98,7 @@
         .border-primary {
             border-color: var(--color-primary-500);
         }
-        
+
         .text-secondary {
             color: var(--color-secondary-500);
         }
@@ -108,14 +108,14 @@
         .hover\:bg-secondary-600:hover {
             background-color: var(--color-secondary-600);
         }
-        
+
         /* 登录页面样式 */
         .login-container {
             box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
             border-radius: 8px;
             max-width: 450px;
         }
-        
+
         .login-input {
             transition: border-color 0.3s ease;
             border-radius: 4px;
@@ -124,12 +124,12 @@
             font-size: 16px;
             width: 100%;
         }
-        
+
         .login-input:focus {
             border-color: var(--color-primary-400);
             outline: none;
         }
-        
+
         .login-button {
             background-color: var(--color-primary-500);
             color: white;
@@ -139,31 +139,31 @@
             font-weight: 500;
             transition: all 0.3s ease;
         }
-        
+
         .login-button:hover {
             background-color: var(--color-primary-600);
             box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12);
             transform: translateY(-1px);
         }
-        
+
         .forgot-password {
             color: var(--color-primary-500);
             font-weight: 500;
             position: relative;
             display: inline-block;
         }
-        
+
         /* 闪光效果 */
         @keyframes glowing {
             0% { text-shadow: 0 0 5px rgba(165, 64, 95, 0.5); }
             50% { text-shadow: 0 0 20px rgba(165, 64, 95, 0.8); }
             100% { text-shadow: 0 0 5px rgba(165, 64, 95, 0.5); }
         }
-        
+
         .glow-effect {
             animation: glowing 2s infinite;
         }
-        
+
         /* 提示气泡 */
         .tooltip {
             position: absolute;
@@ -180,7 +180,7 @@
             pointer-events: none;
             white-space: nowrap;
         }
-        
+
         .tooltip::after {
             content: '';
             position: absolute;
@@ -191,7 +191,7 @@
             border-style: solid;
             border-color: #333 transparent transparent transparent;
         }
-        
+
         /* 打字效果 */
         .typewriter h1 {
             overflow: hidden;
@@ -202,23 +202,23 @@
                 typing 3.5s steps(30, end),
                 blink-caret .75s step-end infinite;
         }
-        
+
         @keyframes typing {
             from { width: 0 }
             to { width: 100% }
         }
-        
+
         @keyframes blink-caret {
             from, to { border-color: transparent }
             50% { border-color: var(--color-primary-500) }
         }
-        
+
         /* 页面转场动画 */
         .page-transition {
             animation: fadeInUp 0.8s ease forwards;
             opacity: 0;
         }
-        
+
         @keyframes fadeInUp {
             from {
                 opacity: 0;
@@ -229,7 +229,7 @@
                 transform: translateY(0);
             }
         }
-        
+
         /* 人机验证卡片样式 */
         .captcha-container {
             position: relative;
@@ -238,21 +238,21 @@
             height: 400px;
             perspective: 1000px;
         }
-        
+
         @media (max-width: 640px) {
             .captcha-container {
                 height: 350px;
             }
-            
+
             .captcha-card {
                 padding: 20px 15px;
             }
-            
+
             .login-container, .captcha-card, .success-container {
                 width: 90%;
             }
         }
-        
+
         .captcha-card {
             position: absolute;
             width: 100%;
@@ -268,30 +268,30 @@
             flex-direction: column;
             justify-content: space-between;
         }
-        
+
         .captcha-card-1 {
             background-color: var(--color-primary-300);
             z-index: 3;
             transform: translateZ(0) translateY(0) rotate(0);
         }
-        
+
         .captcha-card-2 {
             background-color: var(--color-secondary-300);
             z-index: 2;
             transform: translateZ(-5px) translateY(5px) rotate(1deg);
         }
-        
+
         .captcha-card-3 {
             background-color: var(--color-neutral-700);
             z-index: 1;
             transform: translateZ(-10px) translateY(10px) rotate(2deg);
         }
-        
+
         .captcha-card.slide-away {
             transform: translateX(150%) rotate(10deg);
             opacity: 0;
         }
-        
+
         .option-button {
             display: block;
             width: 100%;
@@ -305,25 +305,26 @@
             cursor: pointer;
             transition: all 0.2s ease;
         }
-        
+
         .option-button:hover {
             background-color: #f5f5f5;
             transform: translateY(-2px);
             box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
         }
-        
+
         /* 聊天界面样式 */
         .chat-container {
             display: flex;
             flex-direction: column;
             height: 100%;
             background-color: #e5ddd5;
-            background-image: url('https://s1.ax1x.com/2023/01/01/pSCKeMT.png');
+            background-image: url('https://cdn.jsdelivr.net/gh/LOOTOOT/Happy-WooYeah@main/unsplash-3.jpg');
+            background-size: cover;
             overflow-y: auto;
             padding: 15px;
             border-radius: 8px;
         }
-        
+
         .chat-header {
             display: flex;
             align-items: center;
@@ -333,7 +334,7 @@
             border-top-left-radius: 8px;
             border-top-right-radius: 8px;
         }
-        
+
         .chat-messages {
             flex: 1;
             display: flex;
@@ -341,7 +342,7 @@
             overflow-y: auto;
             padding: 10px;
         }
-        
+
         .message {
             max-width: 70%;
             margin-bottom: 8px;
@@ -350,32 +351,32 @@
             word-wrap: break-word;
             position: relative;
         }
-        
+
         .message-left {
             align-self: flex-start;
             background-color: white;
         }
-        
+
         .message-right {
             align-self: flex-end;
             background-color: #FF95EC;
             color: black;
         }
-        
+
         .chat-avatar {
             width: 40px;
             height: 40px;
             border-radius: 50%;
             margin-right: 10px;
         }
-        
+
         .chat-options {
             display: flex;
             flex-direction: column;
             width: 100%;
             padding: 15px;
         }
-        
+
         .chat-option {
             margin-bottom: 10px;
             padding: 10px 15px;
@@ -385,12 +386,12 @@
             transition: all 0.2s ease;
             text-align: center;
         }
-        
+
         .chat-option:hover {
             background-color: #f0f0f0;
             transform: translateY(-2px);
         }
-        
+
         /* 弹窗样式 */
         .modal {
             position: fixed;
@@ -407,12 +408,12 @@
             visibility: hidden;
             transition: all 0.3s ease;
         }
-        
+
         .modal.active {
             opacity: 1;
             visibility: visible;
         }
-        
+
         .modal-content {
             background-color: white;
             padding: 25px;
@@ -428,11 +429,11 @@
             left: 0;
             margin: auto;
         }
-        
+
         .modal.active .modal-content {
             transform: scale(1);
         }
-        
+
         .modal-close {
             background-color: var(--color-primary-500);
             color: white;
@@ -444,11 +445,11 @@
             font-weight: 500;
             transition: background-color 0.2s ease;
         }
-        
+
         .modal-close:hover {
             background-color: var(--color-primary-600);
         }
-        
+
         /* 彩色标题效果 */
         .rainbow-text {
             background-image: linear-gradient(45deg, #ff5e5e, #ffb86c, #2cccff, #20e3b2, #ffcc70, #c850c0);
@@ -458,7 +459,7 @@
             animation: rainbow-animation 6s linear infinite;
             background-size: 400% 100%;
         }
-        
+
         @keyframes rainbow-animation {
             0%, 100% {
                 background-position: 0 0;
@@ -467,7 +468,7 @@
                 background-position: 100% 0;
             }
         }
-        
+
         /* 掉落的emoji动画 */
         @keyframes fall {
             0% {
@@ -479,14 +480,14 @@
                 opacity: 0;
             }
         }
-        
+
         .falling-emoji {
             position: absolute;
             animation: fall 3s linear forwards;
             font-size: 24px;
             pointer-events: none;
         }
-        
+
         /* 成功页面样式 */
         .success-container {
             text-align: center;
@@ -494,19 +495,19 @@
             margin: 0 auto;
             padding: 40px 20px;
         }
-        
+
         .success-icon {
             font-size: 64px;
             color: #4CAF50;
             margin-bottom: 20px;
         }
-        
+
         .success-title {
             font-size: 28px;
             margin-bottom: 20px;
             font-weight: 700;
         }
-        
+
         .success-badge {
             display: inline-block;
             padding: 8px 16px;
@@ -515,13 +516,13 @@
             font-weight: 500;
             margin-bottom: 30px;
         }
-        
+
         .success-message {
             font-size: 18px;
             color: #555;
             margin-bottom: 30px;
         }
-        
+
         /* 庆祝页面特效 */
         .door-container {
             position: absolute;
@@ -529,7 +530,7 @@
             height: 100%;
             overflow: hidden;
         }
-        
+
         .door {
             position: absolute;
             top: 0;
@@ -538,25 +539,25 @@
             background-color: var(--color-primary-500);
             transition: transform 1.5s cubic-bezier(0.86, 0, 0.07, 1);
         }
-        
+
         .door-left {
             left: 0;
             transform-origin: left;
         }
-        
+
         .door-right {
             right: 0;
             transform-origin: right;
         }
-        
+
         .door-open .door-left {
             transform: perspective(1200px) rotateY(120deg);
         }
-        
+
         .door-open .door-right {
             transform: perspective(1200px) rotateY(-120deg);
         }
-        
+
         .celebration-content {
             position: relative;
             width: 100%;
@@ -568,11 +569,11 @@
             opacity: 0;
             transition: opacity 1s ease;
         }
-        
+
         .celebration-content.show {
             opacity: 1;
         }
-        
+
         .white-circle {
             width: 20px;
             height: 20px;
@@ -581,20 +582,20 @@
             opacity: 0;
             transition: all 2s ease;
         }
-        
+
         .white-circle.show {
             opacity: 1;
         }
-        
+
         .white-circle.expand {
             transform: scale(30);
         }
-        
+
         .white-circle.invert {
             background-color: black;
             transform: scale(1);
         }
-        
+
         .cake-container {
             position: absolute;
             top: 50%;
@@ -603,26 +604,26 @@
             opacity: 0;
             transition: all 1s ease;
         }
-        
+
         .cake-container.show {
             opacity: 1;
         }
-        
+
         .cake-container.fall {
             animation: cakeFallIntoCircle 2s forwards;
         }
-        
+
         @keyframes cakeFallIntoCircle {
             0% { transform: translate(-50%, -50%); opacity: 1; }
             100% { transform: translate(-50%, 20px) scale(0.3); opacity: 0; }
         }
-        
+
         .white-circle.disappear {
             opacity: 0;
             transform: scale(0);
             transition: all 1s ease;
         }
-        
+
         .birthday-text {
             position: absolute;
             bottom: 30%;
@@ -634,11 +635,11 @@
             transition: all 1s ease;
             text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
         }
-        
+
         .birthday-text.show {
             opacity: 1;
         }
-        
+
         .birthday-text.center {
             bottom: 50%;
             transform: translateY(50%);
@@ -651,26 +652,26 @@
             animation: gradientText 5s ease infinite;
             text-shadow: 0 0 20px rgba(255, 255, 255, 0.8);
         }
-        
+
         @keyframes gradientText {
             0% { background-position: 0% 50%; }
             50% { background-position: 100% 50%; }
             100% { background-position: 0% 50%; }
         }
-        
+
         .cake-emoji {
             font-size: 120px;
             animation: float 3s ease-in-out infinite;
             filter: drop-shadow(0 0 15px rgba(255, 223, 191, 0.7));
         }
-        
+
         @keyframes float {
             0%, 100% { transform: translateY(0) rotate(0deg); }
             25% { transform: translateY(-10px) rotate(5deg); }
             50% { transform: translateY(0) rotate(0deg); }
             75% { transform: translateY(10px) rotate(-5deg); }
         }
-        
+
         .birthday-text span {
             display: inline-block;
             opacity: 0;
@@ -679,16 +680,16 @@
             color: white;
             position: relative;
         }
-        
+
         .birthday-text.dark-text span {
             color: black;
         }
-        
+
         .birthday-text.show span {
             opacity: 1;
             transform: translateY(0);
         }
-        
+
         .birthday-text span::after {
             content: '';
             position: absolute;
@@ -700,21 +701,21 @@
             transition: width 0.5s ease;
             transition-delay: 1s;
         }
-        
+
         .birthday-text.show span::after {
             width: 100%;
         }
-        
+
         .birthday-text.center span::after {
             opacity: 0;
         }
-        
+
         .birthday-text span:nth-child(1) { transition-delay: 0.1s; }
         .birthday-text span:nth-child(2) { transition-delay: 0.3s; }
         .birthday-text span:nth-child(3) { transition-delay: 0.5s; }
         .birthday-text span:nth-child(4) { transition-delay: 0.7s; }
         .birthday-text span:nth-child(5) { transition-delay: 0.9s; }
-        
+
         .home-button {
             position: absolute;
             bottom: 30px;
@@ -733,17 +734,17 @@
             transform: scale(0);
             transition: all 0.5s ease;
         }
-        
+
         .home-button.show {
             opacity: 1;
             transform: scale(1);
         }
-        
+
         .home-button:hover {
             background-color: var(--color-primary-600);
             transform: scale(1.1);
         }
-        
+
         @keyframes lightning {
             0% { opacity: 1; transform: scale(1); }
             20% { opacity: 0.3; transform: scale(0.8); }
@@ -752,77 +753,124 @@
             80% { opacity: 0.8; transform: scale(0.9); }
             100% { opacity: 1; transform: scale(1); }
         }
-        
+
+        /* 暗色模式切换按钮 */
+        .theme-toggle {
+            position: fixed;
+            bottom: 20px;
+            left: 20px;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background-color: var(--color-primary-500);
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            z-index: 100;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+            transition: all 0.3s ease;
+        }
+
+        .theme-toggle:hover {
+            transform: scale(1.1);
+        }
+
+        .theme-toggle i {
+            font-size: 20px;
+        }
+
         /* 暗色模式 */
-        @media (prefers-color-scheme: dark) {
-            body {
-                background-color: #121212;
-                color: #f5f5f5;
-            }
-            
-            .login-container {
-                background-color: #1e1e1e;
-                box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
-            }
-            
-            .login-input {
-                background-color: #2a2a2a;
-                color: #f5f5f5;
-                border-color: #444;
-            }
-            
-            .captcha-card, .option-button, .modal-content, .success-container {
-                background-color: #1e1e1e;
-                color: #f5f5f5;
-            }
-            
-            .option-button {
-                border-color: #444;
-            }
-            
-            .option-button:hover {
-                background-color: #333;
-            }
-            
-            .success-badge {
-                background-color: #333;
-                color: #f5f5f5;
-            }
-            
-            .text-gray-500 {
-                color: #aaa;
-            }
-            
-            .text-gray-600 {
-                color: #bbb;
-            }
-            
-            .text-gray-700 {
-                color: #ccc;
-            }
-            
-            .text-gray-800 {
-                color: #ddd;
-            }
-            
-            .text-gray-900 {
-                color: #f5f5f5;
-            }
+        .dark-mode {
+            background-color: #121212;
+            color: #f5f5f5;
+        }
+
+        .dark-mode .login-container {
+            background-color: #1e1e1e;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+        }
+
+        .dark-mode .login-input {
+            background-color: #2a2a2a;
+            color: #f5f5f5;
+            border-color: #444;
+        }
+
+        .dark-mode .captcha-card, 
+        .dark-mode .option-button, 
+        .dark-mode .modal-content, 
+        .dark-mode .success-container {
+            background-color: #1e1e1e;
+            color: #f5f5f5;
+        }
+
+        .dark-mode .option-button {
+            border-color: #444;
+        }
+
+        .dark-mode .option-button:hover {
+            background-color: #333;
+        }
+
+        .dark-mode .success-badge {
+            background-color: #333;
+            color: #f5f5f5;
+        }
+
+        .dark-mode .text-gray-500 {
+            color: #aaa;
+        }
+
+        .dark-mode .text-gray-600 {
+            color: #bbb;
+        }
+
+        .dark-mode .text-gray-700 {
+            color: #ccc;
+        }
+
+        .dark-mode .text-gray-800 {
+            color: #ddd;
+        }
+
+        .dark-mode .text-gray-900 {
+            color: #f5f5f5;
+        }
+
+        .dark-mode .message-left {
+            background-color: #2a2a2a;
+            color: #f5f5f5;
+        }
+
+        .dark-mode .chat-option {
+            background-color: #2a2a2a;
+            color: #f5f5f5;
+        }
+
+        .dark-mode .chat-option:hover {
+            background-color: #333;
         }
     </style>
 </head>
 <body class="font-serif bg-neutral-50 min-h-screen flex flex-col">
+    <!-- 主题切换按钮 -->
+    <div class="theme-toggle" id="themeToggle">
+        <i class="fas fa-moon"></i>
+    </div>
+
     <!-- 谷歌风格登录页面 -->
     <div id="login-page" class="flex-grow flex items-center justify-center py-12 px-4 sm:px-6 lg:px-8 page-transition">
         <div class="login-container bg-white p-8 w-full">
             <div class="flex justify-center mb-6 typewriter">
                 <h1 class="text-2xl font-display font-semibold text-gray-900">Hi, WooYeah</h1>
             </div>
-            
+
             <div class="text-center mb-8">
                 <p class="text-gray-600">请登录您的账号</p>
             </div>
-            
+
             <form id="login-form" class="space-y-6">
                 <div>
                     <label for="email" class="block text-sm font-medium text-gray-700">电子邮箱</label>
@@ -830,7 +878,7 @@
                         <input id="email" name="email" type="email" autocomplete="email" required class="login-input">
                     </div>
                 </div>
-                
+
                 <div>
                     <div class="flex items-center justify-between">
                         <label for="password" class="block text-sm font-medium text-gray-700">密码</label>
@@ -839,28 +887,28 @@
                         <input id="password" name="password" type="password" autocomplete="current-password" required class="login-input">
                     </div>
                 </div>
-                
+
                 <div id="error-message" class="text-red-600 text-sm hidden">账户或密码错误</div>
-                
+
                 <div class="flex items-center justify-between">
                     <div class="flex items-center">
                         <input id="remember-me" name="remember-me" type="checkbox" class="h-4 w-4 text-primary focus:ring-primary border-gray-300 rounded">
                         <label for="remember-me" class="ml-2 block text-sm text-gray-700">记住我</label>
                     </div>
-                    
+
                     <div class="relative">
                         <a href="#" id="forgot-password" class="forgot-password text-sm">忘记密码？</a>
                         <span id="tooltip" class="tooltip">点我</span>
                     </div>
                 </div>
-                
+
                 <div>
                     <button type="submit" class="login-button w-full flex justify-center">
                         登录
                     </button>
                 </div>
             </form>
-            
+
             <div class="mt-6">
                 <div class="relative">
                     <div class="absolute inset-0 flex items-center">
@@ -870,14 +918,14 @@
                         <span class="px-2 bg-white text-gray-500">或</span>
                     </div>
                 </div>
-                
+
                 <div class="mt-6 grid grid-cols-2 gap-3">
                     <div>
                         <a href="#" class="w-full inline-flex justify-center py-2 px-4 border border-gray-300 rounded-md shadow-sm bg-white text-sm font-medium text-gray-700 hover:bg-gray-50">
                             <i class="fab fa-weixin text-green-600 text-lg"></i>
                         </a>
                     </div>
-                    
+
                     <div>
                         <a href="#" class="w-full inline-flex justify-center py-2 px-4 border border-gray-300 rounded-md shadow-sm bg-white text-sm font-medium text-gray-700 hover:bg-gray-50">
                             <i class="fab fa-qq text-blue-600 text-lg"></i>
@@ -887,14 +935,14 @@
             </div>
         </div>
     </div>
-    
+
     <!-- 人机验证页面 -->
     <div id="captcha-page" class="hidden flex-grow flex flex-col items-center justify-center py-8 px-4 sm:px-6 lg:px-8 page-transition">
         <div class="mb-6 text-center">
             <h2 class="text-2xl font-display font-semibold text-gray-900">请证明你<strong>是</strong>人机</h2>
             <p class="text-gray-600 mt-2">请完成以下验证</p>
         </div>
-        
+
         <div class="captcha-container">
             <!-- 第一张卡片 -->
             <div id="card-1" class="captcha-card captcha-card-1" style="background-image: url('https://cdn.jsdelivr.net/gh/LOOTOOT/Happy-WooYeah@main/unsplash-1.jpg');">
@@ -908,7 +956,7 @@
                     </div>
                 </div>
             </div>
-            
+
             <!-- 第二张卡片 -->
             <div id="card-2" class="captcha-card captcha-card-2" style="background-image: url('https://cdn.jsdelivr.net/gh/LOOTOOT/Happy-WooYeah@main/unsplash-2.jpg');">
                 <div class="bg-white bg-opacity-90 p-4 rounded-lg">
@@ -921,7 +969,7 @@
                     </div>
                 </div>
             </div>
-            
+
             <!-- 第三张卡片（聊天界面） -->
             <div id="card-3" class="captcha-card captcha-card-3" style="background-image: url('https://cdn.jsdelivr.net/gh/LOOTOOT/Happy-WooYeah@main/unsplash-4.jpg');">
                 <div class="bg-white bg-opacity-90 p-4 rounded-lg h-full flex flex-col">
@@ -929,12 +977,12 @@
                         <img class="chat-avatar" src="https://cdn.jsdelivr.net/gh/LOOTOOT/Happy-WooYeah@main/img-left-1.png" crossorigin="anonymous" alt="头像">
                         <div>吻醒</div>
                     </div>
-                    
+
                     <div id="chat-messages" class="chat-container flex-grow">
                         <div class="message message-left">
                             <p>知道今天是什么日子吗小姐姐？</p>
                         </div>
-                        
+
                         <div id="chat-options" class="chat-options">
                             <div class="chat-option" data-option="1">是我滴生日思密达🥰</div>
                             <div class="chat-option" data-option="2">你的死期😠</div>
@@ -944,7 +992,7 @@
             </div>
         </div>
     </div>
-    
+
     <!-- 错误提示弹窗 -->
     <div id="error-modal" class="modal">
         <div class="modal-content">
@@ -953,7 +1001,7 @@
             <button class="modal-close">关闭</button>
         </div>
     </div>
-    
+
     <!-- 成功页面 -->
     <div id="success-page" class="hidden flex-grow flex items-center justify-center py-12 px-4 sm:px-6 lg:px-8 page-transition">
         <div class="success-container">
@@ -969,478 +1017,499 @@
             <button id="continue-to-login" class="login-button inline-block">继续</button>
         </div>
     </div>
-    
+
     <!-- 最终登录页面 -->
-    <div id="final-login-page" class="hidden flex-grow flex items-center justify-center py-12 px-4 sm:px-6 lg:px-8 page-transition">
-        <div class="login-container bg-white p-8 w-full">
-            <div class="flex justify-center mb-6">
-                <h1 class="text-2xl font-display font-semibold text-gray-900">Hi, WooYeah</h1>
-            </div>
-            
-            <div class="text-center mb-8">
-                <p class="text-gray-600">请登录您的账号</p>
-            </div>
-            
-            <form id="final-login-form" class="space-y-6">
-                <div>
-                    <label for="final-email" class="block text-sm font-medium text-gray-700">电子邮箱</label>
-                    <div class="mt-1">
-                        <input id="final-email" name="email" type="email" class="login-input" readonly>
-                    </div>
-                </div>
-                
-                <div>
-                    <div class="flex items-center justify-between">
-                        <label for="final-password" class="block text-sm font-medium text-gray-700">密码</label>
-                    </div>
-                    <div class="mt-1">
-                        <input id="final-password" name="password" type="password" class="login-input" readonly>
-                    </div>
-                </div>
-                
-                <div class="flex items-center">
-                    <input id="final-remember-me" name="remember-me" type="checkbox" class="h-4 w-4 text-primary focus:ring-primary border-gray-300 rounded" checked>
-                    <label for="final-remember-me" class="ml-2 block text-sm text-gray-700">记住我</label>
-                </div>
-                
-                <div>
-                    <button type="submit" id="final-submit-btn" class="login-button w-full flex justify-center">
-                        确认
-                    </button>
-                </div>
-            </form>
+<div id="final-login-page" class="hidden flex-grow flex items-center justify-center py-12 px-4 sm:px-6 lg:px-8 page-transition">
+    <div class="login-container bg-white p-8 w-full">
+        <div class="flex justify-center mb-6">
+            <h1 class="text-2xl font-display font-semibold text-gray-900">Hi, WooYeah</h1>
         </div>
+
+        <div class="text-center mb-8">
+            <p class="text-gray-600">请登录您的账号</p>
+        </div>
+
+        <form id="final-login-form" class="space-y-6">
+            <div>
+                <label for="final-email" class="block text-sm font-medium text-gray-700">电子邮箱</label>
+                <div class="mt-1">
+                    <input id="final-email" name="email" type="email" class="login-input" readonly>
+                </div>
+            </div>
+
+            <div>
+                <div class="flex items-center justify-between">
+                    <label for="final-password" class="block text-sm font-medium text-gray-700">密码</label>
+                </div>
+                <div class="mt-1">
+                    <input id="final-password" name="password" type="password" class="login-input" readonly>
+                </div>
+            </div>
+
+            <div class="flex items-center">
+                <input id="final-remember-me" name="remember-me" type="checkbox" class="h-4 w-4 text-primary focus:ring-primary border-gray-300 rounded" checked>
+                <label for="final-remember-me" class="ml-2 block text-sm text-gray-700">记住我</label>
+            </div>
+
+            <div>
+                <button type="submit" id="final-submit-btn" class="login-button w-full flex justify-center">
+                    确认
+                </button>
+            </div>
+        </form>
     </div>
-    
-    <!-- 最终庆祝页面 -->
-    <div id="final-celebration" class="hidden fixed inset-0 bg-black z-50">
-        <div class="door-container">
-            <div class="door door-left"></div>
-            <div class="door door-right"></div>
-        </div>
-        <div class="celebration-content">
-            <div class="white-circle"></div>
-            <div class="cake-container">
-                <div class="cake-emoji">🎂</div>
-            </div>
-            <div class="birthday-text">
-                <span>生</span>
-                <span>日</span>
-                <span>快</span>
-                <span>乐</span>
-                <span>哦</span>
-            </div>
-            <a href="#" id="home-button" class="home-button">
-                <i class="fas fa-home"></i>
-            </a>
-        </div>
+</div>
+
+<!-- 最终庆祝页面 -->
+<div id="final-celebration" class="hidden fixed inset-0 bg-black z-50">
+    <div class="door-container">
+        <div class="door door-left"></div>
+        <div class="door door-right"></div>
     </div>
-    
-    <!-- 作者信息 -->
-    <footer class="py-4 text-center text-sm text-neutral-600 dark:text-neutral-400">
-        <p>作者: fan🪭 | © 爱在2025</p>
-    </footer>
-    
-    <!-- 引入Preline UI JS -->
-    <script src="https://cdn.bootcdn.net/ajax/libs/preline/1.0.0/preline.js"></script>
-    
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            // 登录表单处理
-            const loginForm = document.getElementById('login-form');
-            const errorMessage = document.getElementById('error-message');
-            const forgotPassword = document.getElementById('forgot-password');
-            const tooltip = document.getElementById('tooltip');
-            
-            // 1秒后添加闪光效果
-            setTimeout(() => {
-                forgotPassword.classList.add('glow-effect');
-            }, 1000);
-            
-            // 鼠标悬停在忘记密码上显示提示
-            forgotPassword.addEventListener('mouseenter', function() {
-                tooltip.style.opacity = '1';
-            });
-            
-            forgotPassword.addEventListener('mouseleave', function() {
-                tooltip.style.opacity = '0';
-            });
-            
-            // 表单提交处理
-            loginForm.addEventListener('submit', function(e) {
-                e.preventDefault();
-                // 显示错误信息
-                errorMessage.classList.remove('hidden');
-                // 让错误信息动画效果更明显
-                errorMessage.style.animation = 'shake 0.5s';
-                setTimeout(() => {
-                    errorMessage.style.animation = '';
-                }, 500);
-            });
-            
-            // 忘记密码点击事件
-            forgotPassword.addEventListener('click', function(e) {
-                e.preventDefault();
-                // 转场动画
-                const loginPage = document.getElementById('login-page');
-                loginPage.style.animation = 'fadeOut 0.5s forwards';
-                
-                // 显示人机验证页面
-                setTimeout(() => {
-                    loginPage.classList.add('hidden');
-                    document.getElementById('captcha-page').classList.remove('hidden');
-                }, 500);
-            });
-            
-            // 人机验证页面处理
-            setupCaptchaPage();
-            
-            // 添加摇晃动画
-            const style = document.createElement('style');
-            style.textContent = `
-                @keyframes shake {
-                    0% { transform: translateX(0); }
-                    25% { transform: translateX(-5px); }
-                    50% { transform: translateX(5px); }
-                    75% { transform: translateX(-5px); }
-                    100% { transform: translateX(0); }
-                }
-                
-                @keyframes fadeOut {
-                    from { opacity: 1; transform: translateY(0); }
-                    to { opacity: 0; transform: translateY(-20px); }
-                }
-                
-                @keyframes pulse-animation {
-                    0% { transform: scale(1); }
-                    50% { transform: scale(1.05); box-shadow: 0 0 10px rgba(165, 64, 95, 0.5); }
-                    100% { transform: scale(1); }
-                }
-                
-                .pulse-animation {
-                    animation: pulse-animation 1.5s infinite;
-                }
-            `;
-            document.head.appendChild(style);
-        });
+    <div class="celebration-content">
+        <div class="white-circle"></div>
+        <div class="cake-container">
+            <div class="cake-emoji">🎂</div>
+        </div>
+        <div class="birthday-text">
+            <span>生</span>
+            <span>日</span>
+            <span>快</span>
+            <span>乐</span>
+            <span>哦</span>
+        </div>
+        <a href="#" id="home-button" class="home-button">
+            <i class="fas fa-home"></i>
+        </a>
+    </div>
+</div>
+
+<!-- 作者信息 -->
+<footer class="py-4 text-center text-sm text-neutral-600 dark:text-neutral-400">
+    <p>作者: fan🪭 | © 爱在2025</p>
+</footer>
+
+<!-- 引入Preline UI JS -->
+<script src="https://cdn.bootcdn.net/ajax/libs/preline/1.0.0/preline.js"></script>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        // 主题切换功能
+        const themeToggle = document.getElementById('themeToggle');
+        const prefersDarkScheme = window.matchMedia('(prefers-color-scheme: dark)');
         
-        // 人机验证功能设置
-        function setupCaptchaPage() {
-            // 获取所有卡片
-            const card1 = document.getElementById('card-1');
-            const card2 = document.getElementById('card-2');
-            const card3 = document.getElementById('card-3');
+        // 检查系统主题偏好
+        if (prefersDarkScheme.matches) {
+            document.body.classList.add('dark-mode');
+            themeToggle.innerHTML = '<i class="fas fa-sun"></i>';
+        }
+        
+        // 主题切换按钮点击事件
+        themeToggle.addEventListener('click', function() {
+            if (document.body.classList.contains('dark-mode')) {
+                document.body.classList.remove('dark-mode');
+                themeToggle.innerHTML = '<i class="fas fa-moon"></i>';
+            } else {
+                document.body.classList.add('dark-mode');
+                themeToggle.innerHTML = '<i class="fas fa-sun"></i>';
+            }
+        });
+
+        // 登录表单处理
+        const loginForm = document.getElementById('login-form');
+        const errorMessage = document.getElementById('error-message');
+        const forgotPassword = document.getElementById('forgot-password');
+        const tooltip = document.getElementById('tooltip');
+
+        // 1秒后添加闪光效果
+        setTimeout(() => {
+            forgotPassword.classList.add('glow-effect');
+        }, 1000);
+
+        // 鼠标悬停在忘记密码上显示提示
+        forgotPassword.addEventListener('mouseenter', function() {
+            tooltip.style.opacity = '1';
+        });
+
+        forgotPassword.addEventListener('mouseleave', function() {
+            tooltip.style.opacity = '0';
+        });
+
+        // 表单提交处理
+        loginForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            // 显示错误信息
+            errorMessage.classList.remove('hidden');
+            // 让错误信息动画效果更明显
+            errorMessage.style.animation = 'shake 0.5s';
+            setTimeout(() => {
+                errorMessage.style.animation = '';
+            }, 500);
+        });
+
+        // 忘记密码点击事件
+        forgotPassword.addEventListener('click', function(e) {
+            e.preventDefault();
+            // 转场动画
+            const loginPage = document.getElementById('login-page');
+            loginPage.style.animation = 'fadeOut 0.5s forwards';
+
+            // 显示人机验证页面
+            setTimeout(() => {
+                loginPage.classList.add('hidden');
+                document.getElementById('captcha-page').classList.remove('hidden');
+                setupCaptchaPage();
+            }, 500);
+        });
+
+        // 添加摇晃动画
+        const style = document.createElement('style');
+        style.textContent = `
+            @keyframes shake {
+                0% { transform: translateX(0); }
+                25% { transform: translateX(-5px); }
+                50% { transform: translateX(5px); }
+                75% { transform: translateX(-5px); }
+                100% { transform: translateX(0); }
+            }
             
-            // 获取错误弹窗
-            const errorModal = document.getElementById('error-modal');
-            const closeModalBtn = errorModal.querySelector('.modal-close');
+            @keyframes fadeOut {
+                from { opacity: 1; transform: translateY(0); }
+                to { opacity: 0; transform: translateY(-20px); }
+            }
             
-            // 关闭弹窗按钮事件
-            closeModalBtn.addEventListener('click', function() {
-                errorModal.classList.remove('active');
+            @keyframes pulse-animation {
+                0% { transform: scale(1); }
+                50% { transform: scale(1.05); box-shadow: 0 0 10px rgba(165, 64, 95, 0.5); }
+                100% { transform: scale(1); }
+            }
+            
+            .pulse-animation {
+                animation: pulse-animation 1.5s infinite;
+            }
+        `;
+        document.head.appendChild(style);
+    });
+
+    // 人机验证功能设置
+    function setupCaptchaPage() {
+        // 获取所有卡片
+        const card1 = document.getElementById('card-1');
+        const card2 = document.getElementById('card-2');
+        const card3 = document.getElementById('card-3');
+
+        // 获取错误弹窗
+        const errorModal = document.getElementById('error-modal');
+        const closeModalBtn = errorModal.querySelector('.modal-close');
+
+        // 关闭弹窗按钮事件
+        closeModalBtn.addEventListener('click', function() {
+            errorModal.classList.remove('active');
+        });
+
+        // 第一张卡片的选项按钮
+        const card1Buttons = card1.querySelectorAll('.option-button');
+        card1Buttons.forEach(button => {
+            button.addEventListener('click', function() {
+                if (this.getAttribute('data-correct') === 'true') {
+                    // 正确答案，卡片滑走
+                    card1.classList.add('slide-away');
+                    setTimeout(() => {
+                        card2.style.transform = 'translateZ(0) translateY(0) rotate(0)';
+                        card2.style.zIndex = '3';
+                    }, 400);
+                }
             });
-            
-            // 第一张卡片的选项按钮
-            const card1Buttons = card1.querySelectorAll('.option-button');
-            card1Buttons.forEach(button => {
-                button.addEventListener('click', function() {
-                    if (this.getAttribute('data-correct') === 'true') {
-                        // 正确答案，卡片滑走
-                        card1.classList.add('slide-away');
-                        setTimeout(() => {
-                            card2.style.transform = 'translateZ(0) translateY(0) rotate(0)';
-                            card2.style.zIndex = '3';
-                        }, 400);
-                    }
-                });
+        });
+
+        // 第二张卡片的选项按钮
+        const card2Buttons = card2.querySelectorAll('.option-button');
+        card2Buttons.forEach(button => {
+            button.addEventListener('click', function() {
+                if (this.getAttribute('data-correct') === 'true') {
+                    // 正确答案，卡片滑走
+                    card2.classList.add('slide-away');
+                    setTimeout(() => {
+                        card3.style.transform = 'translateZ(0) translateY(0) rotate(0)';
+                        card3.style.zIndex = '3';
+                    }, 400);
+                } else {
+                    // 错误答案，显示弹窗
+                    errorModal.classList.add('active');
+                    // 修复移动端弹窗位置问题
+                    errorModal.querySelector('.modal-content').style.position = 'fixed';
+                }
             });
-            
-            // 第二张卡片的选项按钮
-            const card2Buttons = card2.querySelectorAll('.option-button');
-            card2Buttons.forEach(button => {
-                button.addEventListener('click', function() {
-                    if (this.getAttribute('data-correct') === 'true') {
-                        // 正确答案，卡片滑走
-                        card2.classList.add('slide-away');
+        });
+
+        // 聊天选项处理
+        const chatOptions = document.querySelectorAll('.chat-option');
+        const chatMessages = document.getElementById('chat-messages');
+
+        chatOptions.forEach(option => {
+            option.addEventListener('click', function() {
+                const optionValue = this.getAttribute('data-option');
+                const optionText = this.textContent;
+
+                // 移除选项
+                document.getElementById('chat-options').remove();
+
+                // 添加用户消息
+                addMessage('right', optionText);
+
+                if (optionValue === '2') { // "你的死期😠"
+                    // 添加回复和图片
+                    setTimeout(() => {
+                        addMessage('left', '🤣，把我笑死吗？', 'https://cdn.jsdelivr.net/gh/LOOTOOT/Happy-WooYeah@main/img-left-2.jpg');
+
                         setTimeout(() => {
-                            card3.style.transform = 'translateZ(0) translateY(0) rotate(0)';
-                            card3.style.zIndex = '3';
-                        }, 400);
-                    } else {
-                        // 错误答案，显示弹窗
-                        errorModal.classList.add('active');
-                    }
-                });
-            });
-            
-            // 聊天选项处理
-            const chatOptions = document.querySelectorAll('.chat-option');
-            const chatMessages = document.getElementById('chat-messages');
-            
-            chatOptions.forEach(option => {
-                option.addEventListener('click', function() {
-                    const optionValue = this.getAttribute('data-option');
-                    const optionText = this.textContent;
-                    
-                    // 移除选项
-                    document.getElementById('chat-options').remove();
-                    
-                    // 添加用户消息
-                    addMessage('right', optionText);
-                    
-                    if (optionValue === '2') { // "你的死期😠"
-                        // 添加回复和图片
-                        setTimeout(() => {
-                            addMessage('left', '🤣，把我笑死吗？', 'https://cdn.jsdelivr.net/gh/LOOTOOT/Happy-WooYeah@main/img-left-2.jpg');
-                            
+                            addMessage('left', '好好选，别搞笑');
+
+                            // 重新添加单个选项
                             setTimeout(() => {
-                                addMessage('left', '好好选，别搞笑');
-                                
-                                // 重新添加单个选项
-                                setTimeout(() => {
-                                    const newOptions = document.createElement('div');
-                                    newOptions.id = 'chat-options';
-                                    newOptions.className = 'chat-options';
-                                    newOptions.innerHTML = `<div class="chat-option" data-option="1">是我滴生日思密达🥰</div>`;
-                                    chatMessages.appendChild(newOptions);
-                                    
-                                    // 绑定新选项点击事件
-                                    newOptions.querySelector('.chat-option').addEventListener('click', function() {
-                                        // 移除选项
-                                        newOptions.remove();
-                                        
-                                        // 添加用户消息
-                                        addMessage('right', '是我滴生日思密达🥰');
-                                        
-                                        // 继续生日祝福流程
-                                        birthdayWishesProcess();
-                                    });
-                                }, 1000);
+                                const newOptions = document.createElement('div');
+                                newOptions.id = 'chat-options';
+                                newOptions.className = 'chat-options';
+                                newOptions.innerHTML = `<div class="chat-option" data-option="1">是我滴生日思密达🥰</div>`;
+                                chatMessages.appendChild(newOptions);
+
+                                // 绑定新选项点击事件
+                                newOptions.querySelector('.chat-option').addEventListener('click', function() {
+                                    // 移除选项
+                                    newOptions.remove();
+
+                                    // 添加用户消息
+                                    addMessage('right', '是我滴生日思密达🥰');
+
+                                    // 继续生日祝福流程
+                                    birthdayWishesProcess();
+                                });
                             }, 1000);
                         }, 1000);
-                    } else { // "是我滴生日思密达🥰"
-                        // 直接进入生日祝福流程
-                        birthdayWishesProcess();
-                    }
-                });
+                    }, 1000);
+                } else { // "是我滴生日思密达🥰"
+                    // 直接进入生日祝福流程
+                    birthdayWishesProcess();
+                }
             });
-            
-            // 生日祝福流程
-            function birthdayWishesProcess() {
+        });
+
+        // 生日祝福流程
+        function birthdayWishesProcess() {
+            setTimeout(() => {
+                // 掉落emoji
+                startEmojiRain();
+
+                // 添加回复消息
                 setTimeout(() => {
-                    // 掉落emoji
-                    startEmojiRain();
-                    
-                    // 添加回复消息
+                    addMessage('left', 'Yeeep，生日快乐🎂');
+
+                    // 结束验证，转到成功页面
                     setTimeout(() => {
-                        addMessage('left', 'Yeeep，生日快乐🎂');
-                        
-                        // 结束验证，转到成功页面
+                        // 卡片滑走
+                        card3.classList.add('slide-away');
+
+                        // 显示成功页面
                         setTimeout(() => {
-                            // 卡片滑走
-                            card3.classList.add('slide-away');
-                            
-                            // 显示成功页面
-                            setTimeout(() => {
-                                document.getElementById('captcha-page').classList.add('hidden');
-                                document.getElementById('success-page').classList.remove('hidden');
-                                
-                                // 绑定继续按钮事件
-                                document.getElementById('continue-to-login').addEventListener('click', function() {
-                                    document.getElementById('success-page').style.animation = 'fadeOut 0.5s forwards';
-                                    
-                                    setTimeout(() => {
-                                        document.getElementById('success-page').classList.add('hidden');
-                                        document.getElementById('final-login-page').classList.remove('hidden');
-                                        
-                                        // 开始自动输入
-                                        autoTypeLoginInfo();
-                                    }, 500);
-                                });
-                            }, 800);
-                        }, 2000);
-                    }, 1000);
-                }, 500);
-            }
-            
-            // 自动输入账号密码
-            function autoTypeLoginInfo() {
-                const emailInput = document.getElementById('final-email');
-                const passwordInput = document.getElementById('final-password');
-                const loginButton = document.getElementById('final-submit-btn');
-                
-                // 清空输入框
-                emailInput.value = '';
-                passwordInput.value = '';
-                
-                // 模拟输入账号
-                typeText(emailInput, 'WooYeah爱数学', 0, () => {
-                    // 账号输入完后开始输入密码
-                    setTimeout(() => {
-                        typeText(passwordInput, '我是最强王者', 0, () => {
-                            // 密码输入完后聚焦到提交按钮
-                            loginButton.focus();
-                            loginButton.classList.add('pulse-animation');
-                        });
-                    }, 500);
-                });
-                
-                // 绑定最终登录按钮事件
-                document.getElementById('final-login-form').addEventListener('submit', function(e) {
-                    e.preventDefault();
-                    
-                    // 登录成功效果
-                    loginButton.innerHTML = '<i class="fas fa-check-circle mr-2"></i> 登录成功';
-                    loginButton.classList.add('bg-green-500');
-                    
-                    // 延迟显示庆祝页面
-                    setTimeout(() => {
-                        showFinalCelebration();
-                    }, 1000);
-                });
-            }
-            
-            // 显示最终庆祝页面
-            function showFinalCelebration() {
-                const finalCelebration = document.getElementById('final-celebration');
-                finalCelebration.classList.remove('hidden');
-                
-                // 门开启效果
-                setTimeout(() => {
-                    document.querySelector('.door-container').classList.add('door-open');
-                    
-                    // 门开启后显示内容
-                    setTimeout(() => {
-                        const celebrationContent = document.querySelector('.celebration-content');
-                        celebrationContent.classList.add('show');
-                        
-                        // 显示白色圆点
-                        setTimeout(() => {
-                            const whiteCircle = document.querySelector('.white-circle');
-                            whiteCircle.classList.add('show');
-                            
-                            // 圆点扩大
-                            setTimeout(() => {
-                                whiteCircle.classList.add('expand');
-                                
-                                // 显示蛋糕
+                            document.getElementById('captcha-page').classList.add('hidden');
+                            document.getElementById('success-page').classList.remove('hidden');
+
+                            // 绑定继续按钮事件
+                            document.getElementById('continue-to-login').addEventListener('click', function() {
+                                document.getElementById('success-page').style.animation = 'fadeOut 0.5s forwards';
+
                                 setTimeout(() => {
-                                    const cakeContainer = document.querySelector('.cake-container');
-                                    cakeContainer.classList.add('show');
-                                    
-                                    // 显示文字
-                                    setTimeout(() => {
-                                        const birthdayText = document.querySelector('.birthday-text');
-                                        birthdayText.classList.add('show');
-                                        
-                                        // 3秒后圆点变黑，页面变白
-                                        setTimeout(() => {
-                                            document.body.classList.add('bg-white');
-                                            finalCelebration.style.backgroundColor = '#ffffff';
-                                            whiteCircle.classList.add('invert');
-                                            birthdayText.classList.add('dark-text');
-                                            
-                                            // 蛋糕掉入黑色圆点中
-                                            setTimeout(() => {
-                                                cakeContainer.classList.add('fall');
-                                                
-                                                // 黑色圆点消失
-                                                setTimeout(() => {
-                                                    whiteCircle.classList.add('disappear');
-                                                    
-                                                    // 文字居中并特效
-                                                    setTimeout(() => {
-                                                        birthdayText.classList.add('center');
-                                                        birthdayText.style.animation = 'gradientText 5s ease infinite';
-                                                        
-                                                        // 额外添加文字闪烁特效
-                                                        const textSpans = birthdayText.querySelectorAll('span');
-                                                        textSpans.forEach((span, i) => {
-                                                            setTimeout(() => {
-                                                                span.style.animation = 'lightning 0.5s';
-                                                                setTimeout(() => {
-                                                                    span.style.animation = '';
-                                                                }, 500);
-                                                            }, i * 200);
-                                                        });
-                                                        
-                                                        // 显示首页按钮
-                                                        setTimeout(() => {
-                                                            const homeButton = document.getElementById('home-button');
-                                                            homeButton.classList.add('show');
-                                                            
-                                                            // 绑定首页按钮事件
-                                                            homeButton.addEventListener('click', function(e) {
-                                                                e.preventDefault();
-                                                                location.reload();
-                                                            });
-                                                        }, 1500);
-                                                    }, 1000);
-                                                }, 2000);
-                                            }, 2000);
-                                        }, 3000);
-                                    }, 1000);
+                                    document.getElementById('success-page').classList.add('hidden');
+                                    document.getElementById('final-login-page').classList.remove('hidden');
+
+                                    // 开始自动输入
+                                    autoTypeLoginInfo();
                                 }, 500);
-                            }, 2000);
-                        }, 2000);
-                    }, 1500);
-                }, 100);
-            }
-            
-            // 模拟打字效果函数
-            function typeText(element, text, index = 0, callback) {
-                if (index < text.length) {
-                    element.value += text.charAt(index);
-                    setTimeout(() => typeText(element, text, index + 1, callback), 100);
-                } else if (callback) {
-                    callback();
-                }
-            }
-            
-            // 添加消息到聊天界面
-            function addMessage(side, text, imageUrl = null) {
-                const message = document.createElement('div');
-                message.className = `message message-${side}`;
-                
-                if (imageUrl) {
-                    message.innerHTML = `
-                        <div>
-                            <img src="${imageUrl}" alt="图片" style="max-width: 100%; border-radius: 8px; margin-bottom: 5px;">
-                            <p>${text}</p>
-                        </div>
-                    `;
-                } else {
-                    message.innerHTML = `<p>${text}</p>`;
-                }
-                
-                chatMessages.appendChild(message);
-                chatMessages.scrollTop = chatMessages.scrollHeight;
-            }
-            
-            // 创建掉落的emoji效果
-            function startEmojiRain() {
-                const container = document.getElementById('chat-messages');
-                const emojis = ['🎂', '🎉', '🎈', '🎁', '🎊', '🥳'];
-                const width = container.offsetWidth;
-                
-                // 创建20个emoji
-                for (let i = 0; i < 20; i++) {
+                            });
+                        }, 800);
+                    }, 2000);
+                }, 1000);
+            }, 500);
+        }
+
+        // 自动输入账号密码
+        function autoTypeLoginInfo() {
+            const emailInput = document.getElementById('final-email');
+            const passwordInput = document.getElementById('final-password');
+            const loginButton = document.getElementById('final-submit-btn');
+
+            // 清空输入框
+            emailInput.value = '';
+            passwordInput.value = '';
+
+            // 模拟输入账号
+            typeText(emailInput, 'WooYeah爱数学', 0, () => {
+                // 账号输入完后开始输入密码
+                setTimeout(() => {
+                    typeText(passwordInput, '我是最强王者', 0, () => {
+                        // 密码输入完后聚焦到提交按钮
+                        loginButton.focus();
+                        loginButton.classList.add('pulse-animation');
+                    });
+                }, 500);
+            });
+
+            // 绑定最终登录按钮事件
+            document.getElementById('final-login-form').addEventListener('submit', function(e) {
+                e.preventDefault();
+
+                // 登录成功效果
+                loginButton.innerHTML = '<i class="fas fa-check-circle mr-2"></i> 登录成功';
+                loginButton.classList.add('bg-green-500');
+
+                // 延迟显示庆祝页面
+                setTimeout(() => {
+                    showFinalCelebration();
+                }, 1000);
+            });
+        }
+
+        // 显示最终庆祝页面
+        function showFinalCelebration() {
+            const finalCelebration = document.getElementById('final-celebration');
+            finalCelebration.classList.remove('hidden');
+
+            // 门开启效果
+            setTimeout(() => {
+                document.querySelector('.door-container').classList.add('door-open');
+
+                // 门开启后显示内容
+                setTimeout(() => {
+                    const celebrationContent = document.querySelector('.celebration-content');
+                    celebrationContent.classList.add('show');
+
+                    // 显示白色圆点
                     setTimeout(() => {
-                        const emoji = document.createElement('div');
-                        emoji.className = 'falling-emoji';
-                        emoji.textContent = emojis[Math.floor(Math.random() * emojis.length)];
-                        emoji.style.left = `${Math.random() * width}px`;
-                        emoji.style.animationDuration = `${2 + Math.random() * 3}s`;
-                        container.appendChild(emoji);
-                        
-                        // 动画结束后移除元素
+                        const whiteCircle = document.querySelector('.white-circle');
+                        whiteCircle.classList.add('show');
+
+                        // 圆点扩大
                         setTimeout(() => {
-                            emoji.remove();
-                        }, 3000);
-                    }, i * 100); // 错开时间创建
-                }
+                            whiteCircle.classList.add('expand');
+
+                            // 显示蛋糕
+                            setTimeout(() => {
+                                const cakeContainer = document.querySelector('.cake-container');
+                                cakeContainer.classList.add('show');
+
+                                // 显示文字
+                                setTimeout(() => {
+                                    const birthdayText = document.querySelector('.birthday-text');
+                                    birthdayText.classList.add('show');
+
+                                    // 3秒后圆点变黑，页面变白
+                                    setTimeout(() => {
+                                        document.body.classList.add('bg-white');
+                                        finalCelebration.style.backgroundColor = '#ffffff';
+                                        whiteCircle.classList.add('invert');
+                                        birthdayText.classList.add('dark-text');
+
+                                        // 蛋糕掉入黑色圆点中
+                                        setTimeout(() => {
+                                            cakeContainer.classList.add('fall');
+
+                                            // 黑色圆点消失
+                                            setTimeout(() => {
+                                                whiteCircle.classList.add('disappear');
+
+                                                // 文字居中并特效
+                                                setTimeout(() => {
+                                                    birthdayText.classList.add('center');
+                                                    birthdayText.style.animation = 'gradientText 5s ease infinite';
+
+                                                    // 额外添加文字闪烁特效
+                                                    const textSpans = birthdayText.querySelectorAll('span');
+                                                    textSpans.forEach((span, i) => {
+                                                        setTimeout(() => {
+                                                            span.style.animation = 'lightning 0.5s';
+                                                            setTimeout(() => {
+                                                                span.style.animation = '';
+                                                            }, 500);
+                                                        }, i * 200);
+                                                    });
+
+                                                    // 显示首页按钮
+                                                    setTimeout(() => {
+                                                        const homeButton = document.getElementById('home-button');
+                                                        homeButton.classList.add('show');
+
+                                                        // 绑定首页按钮事件
+                                                        homeButton.addEventListener('click', function(e) {
+                                                            e.preventDefault();
+                                                            location.reload();
+                                                        });
+                                                    }, 1500);
+                                                }, 1000);
+                                            }, 2000);
+                                        }, 2000);
+                                    }, 3000);
+                                }, 1000);
+                            }, 500);
+                        }, 2000);
+                    }, 2000);
+                }, 1500);
+            }, 100);
+        }
+
+        // 模拟打字效果函数
+        function typeText(element, text, index = 0, callback) {
+            if (index < text.length) {
+                element.value += text.charAt(index);
+                setTimeout(() => typeText(element, text, index + 1, callback), 100);
+            } else if (callback) {
+                callback();
             }
         }
-    </script>
+
+        // 添加消息到聊天界面
+        function addMessage(side, text, imageUrl = null) {
+            const message = document.createElement('div');
+            message.className = `message message-${side}`;
+
+            if (imageUrl) {
+                message.innerHTML = `
+                    <div>
+                        <img src="${imageUrl}" alt="图片" style="max-width: 100%; border-radius: 8px; margin-bottom: 5px;">
+                        <p>${text}</p>
+                    </div>
+                `;
+            } else {
+                message.innerHTML = `<p>${text}</p>`;
+            }
+
+            chatMessages.appendChild(message);
+            chatMessages.scrollTop = chatMessages.scrollHeight;
+        }
+
+        // 创建掉落的emoji效果
+        function startEmojiRain() {
+            const container = document.getElementById('chat-messages');
+            const emojis = ['🎂', '🎉', '🎈', '🎁', '🎊', '🥳'];
+            const width = container.offsetWidth;
+
+            // 创建20个emoji
+            for (let i = 0; i < 20; i++) {
+                setTimeout(() => {
+                    const emoji = document.createElement('div');
+                    emoji.className = 'falling-emoji';
+                    emoji.textContent = emojis[Math.floor(Math.random() * emojis.length)];
+                    emoji.style.left = `${Math.random() * width}px`;
+                    emoji.style.animationDuration = `${2 + Math.random() * 3}s`;
+                    container.appendChild(emoji);
+
+                    // 动画结束后移除元素
+                    setTimeout(() => {
+                        emoji.remove();
+                    }, 3000);
+                }, i * 100); // 错开时间创建
+            }
+        }
+    }
+</script>
 </body>
 </html>
