@@ -6,16 +6,16 @@
     <title>HappyWooYeah</title>
     
     <!-- 引入字体 -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Merriweather:wght@300;400;700&family=Fira+Code&family=Montserrat:wght@400;500;600;700&family=Caveat&display=swap" rel="stylesheet">
+    <link href="https://fonts.loli.net/css2?family=Inter:wght@300;400;500;600;700&family=Merriweather:wght@300;400;700&family=Fira+Code&family=Montserrat:wght@400;500;600;700&family=Caveat&display=swap" rel="stylesheet">
     
     <!-- 引入TailwindCSS -->
-    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://cdn.bootcdn.net/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
     
     <!-- 引入Preline UI -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/preline/dist/preline.min.css" />
+    <link rel="stylesheet" href="https://cdn.bootcdn.net/ajax/libs/preline/1.0.0/preline.min.css" />
     
     <!-- 引入图标库 -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+    <link rel="stylesheet" href="https://cdn.bootcdn.net/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
 
     <style>
         :root {
@@ -239,6 +239,20 @@
             perspective: 1000px;
         }
         
+        @media (max-width: 640px) {
+            .captcha-container {
+                height: 350px;
+            }
+            
+            .captcha-card {
+                padding: 20px 15px;
+            }
+            
+            .login-container, .captcha-card, .success-container {
+                width: 90%;
+            }
+        }
+        
         .captcha-card {
             position: absolute;
             width: 100%;
@@ -304,7 +318,7 @@
             flex-direction: column;
             height: 100%;
             background-color: #e5ddd5;
-            background-image: url('https://i.imgur.com/HNjXuFH.png');
+            background-image: url('https://s1.ax1x.com/2023/01/01/pSCKeMT.png');
             overflow-y: auto;
             padding: 15px;
             border-radius: 8px;
@@ -404,11 +418,15 @@
             padding: 25px;
             border-radius: 8px;
             max-width: 400px;
-            width: 80%;
+            width: 90%;
             text-align: center;
             box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
             transform: scale(0.8);
             transition: transform 0.3s ease;
+            position: relative;
+            top: 0;
+            left: 0;
+            margin: auto;
         }
         
         .modal.active .modal-content {
@@ -908,7 +926,7 @@
             <div id="card-3" class="captcha-card captcha-card-3" style="background-image: url('https://cdn.jsdelivr.net/gh/LOOTOOT/Happy-WooYeah@main/unsplash-4.jpg');">
                 <div class="bg-white bg-opacity-90 p-4 rounded-lg h-full flex flex-col">
                     <div class="chat-header mb-2">
-                        <img class="chat-avatar" src="https://cdn.jsdelivr.net/gh/LOOTOOT/Happy-WooYeah@main/img-left-1.png" alt="头像">
+                        <img class="chat-avatar" src="https://cdn.jsdelivr.net/gh/LOOTOOT/Happy-WooYeah@main/img-left-1.png" crossorigin="anonymous" alt="头像">
                         <div>吻醒</div>
                     </div>
                     
@@ -1019,12 +1037,12 @@
     </div>
     
     <!-- 作者信息 -->
-    <footer class="py-4 text-center text-sm text-neutral-500 dark:text-neutral-400">
+    <footer class="py-4 text-center text-sm text-neutral-600 dark:text-neutral-400">
         <p>作者: fan🪭 | © 爱在2025</p>
     </footer>
     
     <!-- 引入Preline UI JS -->
-    <script src="https://cdn.jsdelivr.net/npm/preline/dist/preline.js"></script>
+    <script src="https://cdn.bootcdn.net/ajax/libs/preline/1.0.0/preline.js"></script>
     
     <script>
         document.addEventListener('DOMContentLoaded', function() {
