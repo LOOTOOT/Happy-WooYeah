@@ -324,14 +324,16 @@
 
         @media (max-width: 640px) {
             .captcha-container {
-                height: 350px;
+                height: 450px; /* 增加高度确保选项都可见 */
             }
 
             .captcha-card {
                 padding: 20px 15px;
+                height: auto; /* 允许卡片高度自适应内容 */
+                min-height: 100%;
             }
 
-            .login-container, .captcha-card, .success-container {
+            .login-container, .success-container {
                 width: 90%;
             }
         }
@@ -549,12 +551,14 @@
             box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
             transform: scale(0.9);
             transition: transform 0.3s ease;
-            position: relative;
-            margin: 0 auto;
+            position: fixed; /* 保证在移动设备上固定居中 */
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%) scale(0.9);
         }
 
         .modal.active .modal-content {
-            transform: scale(1);
+            transform: translate(-50%, -50%) scale(1);
         }
 
         .modal-close {
@@ -1487,6 +1491,8 @@
                             this.classList.remove('button-click');
                             // 错误答案，显示弹窗
                             errorModal.classList.add('active');
+                            // 确保弹窗在所有设备上居中显示
+                            window.scrollTo(0, 0); // 滚动到顶部确保弹窗可见
                         }, 200);
                     }
                 });
